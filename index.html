@@ -1,0 +1,40 @@
+<!doctype html5>
+<html>
+<head>
+	<title>Multiresolution Preview</title>
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-darkness/jquery-ui.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="multires-preview.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="underscore-min.js"></script>
+	<script src="multires-preview.js"></script>
+</head>
+<body>
+	<div class="preview-bar">
+		<div id="load-box">
+			<input id="url" name="url" type="url" value="" placeholder="url" />
+			<input id="load-button" type="button" value="Load" />
+		</div>
+		<div id="res-list"></div>
+		
+		<div id="resolution-indicator"></div>
+		
+		<div id="prefs">
+			<input type="checkbox" id="adjust-height" name="adjust-height" /><label for="adjust-height" class="checkbox-label">Adjust for window chrome</label>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	
+	<div id="preview-holder">
+		<iframe id="preview-frame" class="preview-frame"></iframe>
+	</div>
+	
+	<script type="template" id="radio-template">
+		{@ _.each(obj, function(res) { @}
+			<input type="radio" class="resolution-radio" value="{{ res.key }}" id="{{ res.id }}" name="resolution-radio" title="{{ res.id }}" />
+			<label for="{{ res.id }}" title="{{ res.id }}" class="radio-label">{{ res.key }}</label>
+		{@ }); @}
+	</script>
+</body>
+</html>

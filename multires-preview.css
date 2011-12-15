@@ -1,0 +1,62 @@
+
+body {
+    background-color: #000;
+    color: #FFF;
+    text-align:center;
+    font-family;sans-serif;
+}
+
+iframe {
+    border:0px;
+}
+
+.preview-bar {
+    margin: 0px auto;
+}
+
+.preview-bar div {
+    float:left;
+    margin-right:20px;
+}
+
+.clear {
+    float:none !important;
+    clear:both;
+}
+
+#resolution-indicator {
+    font-weight:bold;
+    padding-top:4px;
+}
+
+#preview-holder {
+    margin: 4px 0 0 0;
+}
+
+.preview-frame {
+    margin: 0px auto;
+    overflow-x:hidden;
+}
+
+#url {
+    width:400px;
+}
+
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
+
+.ui-button {
+    font-size:10px;
+}
+
+span.ui-button-text {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;   
+}
